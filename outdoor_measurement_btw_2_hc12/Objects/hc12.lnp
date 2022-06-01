@@ -1,0 +1,18 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\button.o"
+".\objects\hc12.o"
+".\objects\lcd.o"
+".\objects\system.o"
+".\objects\clocks.o"
+".\objects\dma.o"
+".\objects\gpio.o"
+".\objects\systick.o"
+".\objects\uart.o"
+".\objects\i2c.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\hc12.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\hc12.map" -o .\Objects\hc12.axf
